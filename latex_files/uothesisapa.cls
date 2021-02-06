@@ -104,6 +104,7 @@
 \PassOptionsToClass{12pt}{report}
 \fi\fi
 \LoadClass{report}
+\RequirePackage[letterpaper]{geometry}
 \RequirePackage{float}
 %\RequirePackage{subfig}
 \RequirePackage{subcaption}
@@ -403,7 +404,7 @@ of this document.}
         \@committee\\ \\ 
       \fi
       and & \\ \\
-      \@graddean &  Dean of the Graduate School
+      \@graddean
     \end{tabular}\\*[\baselineskip]
     Original approval signatures are on file with the
     University of Oregon Graduate School.\\*[\baselineskip]

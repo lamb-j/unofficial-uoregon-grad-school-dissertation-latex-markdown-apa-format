@@ -6,7 +6,7 @@ MAIN = main
 
 all: $(MAIN).pdf findref
 
-$(MAIN).pdf: *.tex *.bib
+$(MAIN).pdf: *.tex $(MAIN).bib
 	pdflatex $(LATEXFLAGS) $(MAIN).tex
 	bibtex $(LATEXFLAGS) $(MAIN)
 	touch $(MAIN).tex
