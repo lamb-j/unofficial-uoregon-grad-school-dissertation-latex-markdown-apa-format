@@ -1,9 +1,9 @@
 % ----------------------------------------------------------------
-%% uothesis.cls 
-%% Support for formatting of documents associated 
+%% uothesis.cls
+%% Support for formatting of documents associated
 %% with the graduate requirements for the doctoral degrees as
 %% defined by the University of Oregon Graduate School.
-%% All contact regarding this package should be to 
+%% All contact regarding this package should be to
 %% the University of Oregon CMET Consulting.
 %% Released under the LaTeX Project Public License v1.3c or later
 %% See http://www.latex-project.org/lppl.txt
@@ -22,7 +22,7 @@
 %% TOC now lists to the third level of section headers
 %%
 %%----------------------------------------------------------------------------%%
-%% Identification 
+%% Identification
 %%----------------------------------------------------------------------------%%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{uothesisapa} %[2012/02/08 v2.5.6 Submission to University of Oregon Graduate School]
@@ -104,7 +104,6 @@
 \PassOptionsToClass{12pt}{report}
 \fi\fi
 \LoadClass{report}
-\RequirePackage[letterpaper]{geometry}
 \RequirePackage{float}
 %\RequirePackage{subfig}
 \RequirePackage{subcaption}
@@ -334,7 +333,7 @@ of this document.}
      \hbox to0pt{}\nointerlineskip\vskip\@tempdima
 }
 
-\setcounter{tocdepth}{3}   
+\setcounter{tocdepth}{3}
 \newcounter{@shownumdepth}
 
 \if@gsmodern
@@ -399,9 +398,9 @@ of this document.}
       \fi
       \if@lackscommittee
         % If we don't have a committee, do nothing. Otherwise, render the committee. Rather, just enter a few blank lines.
-        \\ \\ 
+        \\ \\
       \else
-        \@committee\\ \\ 
+        \@committee\\ \\
       \fi
       and & \\ \\
       \@graddean
@@ -460,7 +459,7 @@ All rights reserved.
     \@degree\\*[\baselineskip]
     \@department\\*[\baselineskip]
     \@degreemonth ~\thedegreeyear\\*[\baselineskip]
-    Title: \@abstracttitle\\*[\baselineskip] 
+    Title: \@abstracttitle\\*[\baselineskip]
     %\\*[2\baselineskip]
   \end{spacing}
   \ifjustified
@@ -535,7 +534,7 @@ All rights reserved.
 
 %------------------------------------------------------------------------------%
 % Define CV
-% Comment out irrelevant lines with irrelevant section headers. 
+% Comment out irrelevant lines with irrelevant section headers.
 %------------------------------------------------------------------------------%
 \def\@makevita{
   \clearpage
@@ -544,7 +543,7 @@ All rights reserved.
   \begin{singlespacing}
     \vspace*{3ex}
     \noindent NAME OF AUTHOR:\quad \@author \vskip1.5\baselineskip
-    \everypar={\hangindent=\@cvhangindent} 
+    \everypar={\hangindent=\@cvhangindent}
     \noindent GRADUATE AND UNDERGRADUATE SCHOOLS ATTENDED: \vskip\baselineskip \@schools \vskip\baselineskip
     \vskip \baselineskip
     \noindent DEGREES AWARDED: \vskip\baselineskip \@degrees \vskip\baselineskip
@@ -678,7 +677,7 @@ Draft of \@longdraftdate\\
   \def\@evenhead{{\hbox to\textwidth{Chapter\hfil{Page}}}}
   \textheight 620pt
   \headheight 14pt
-  \headsep 14pt 
+  \headsep 14pt
 }
 \def\ps@lofextraheadings{
   \def\@oddfoot{\@footlines{\@footer}}
@@ -801,11 +800,6 @@ Draft of \@longdraftdate\\
   \if@numsections
      \def\l@section{
        \@sechack\@dottedtocline{1}{0.5in}{2em}}
-  \else
-	% Edit by JL: I changed all 2em to 0em below -- the second set of brackets in each of these controls the hanging indent for wrapped lines.
-    \def\l@section{\@sechack\@dottedtocline{1}{0.5in}{0em}}  % sections other than Chapters  indent is .5 inch
-    \def\l@subsection{\@sechack\@dottedtocline{2}{0.75in}{0em}}  % sections other than Chapters  indent is .5 inch
-    \def\l@subsubsection{\@sechack\@dottedtocline{3}{1in}{0em}}  % sections other than Chapters  indent is .5 inch
   \fi
 \fi
 \def\l@figure{\@dottedtocline{0}{0in}{2.3em}}%
@@ -889,7 +883,7 @@ Draft of \@longdraftdate\\
         \cleardoublepage
         \phantomsection % Added by JL for compatibility with the hyperref package, following http://tex.stackexchange.com/a/23503 (this will get the hyperlink anchor for the line to be correct, so that when it's clicked on, it will take the reader to the correct page)
         \addcontentsline{toc}{chapter}
-        {\protect\number@appendix{\number\c@chapter}{\Alph{chapter}} % removed . from {\Alph{chapter}. } everything seems okay. 
+        {\protect\number@appendix{\number\c@chapter}{\Alph{chapter}} % removed . from {\Alph{chapter}. } everything seems okay.
            \ifsc\textsc{#1}
            \else\uppercase{#1}
            \fi
@@ -1134,14 +1128,14 @@ deprecated by Grad. School}
 %% J. Paul Walser, Bei Li, Bart Massey, et al.
 %% "maintained" (as per LPPL maintenance status) by
 %% Michael D. Anderson
-%% 
+%%
 %% It may be distributed and/or modified under the conditions of
 %% the LaTeX Project Public License (LPPL), either version 1.3c of
 %% this license or (at your option) any later version.  The latest
 %% version of this license is in the file:
-%% 
+%%
 %% http://www.latex-project.org/lppl.txt
-%% 
-%% 
+%%
+%%
 %%
 %% End of file `uothesis.cls'.
