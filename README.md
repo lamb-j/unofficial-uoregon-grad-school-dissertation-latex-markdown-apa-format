@@ -78,7 +78,7 @@ In general, I recommend searching the .tex and .cls files for lines that begin w
 If you are running Ubuntu e.g., you will need to install `texlive-bibtex-extra` (for the `apacite` LaTeX package) and `texlive-fonts-extra` (for the `bbm` LaTeX package).
 
 #### MacOS
-If you use Macports, we recommend `port install texlive-latex-full`, which is every package. It may work if you just pick `texlive-latex-recommended` and `texlive-bibtex-extra`. If you use Homebrew or no command line package manager, try [MacTex](https://www.tug.org/mactex/mactex-download.html).
+If you use Macports, we recommend `port install texlive-latex-full`, which is every package. It may work if you just do `port install texlive-latex-recommended texlive-bibtex-extra texlive-fonts-extra`. If you use Homebrew or no command line package manager, try [MacTex](https://www.tug.org/mactex/mactex-download.html).
 
 #### Windows
 On windows: [MikTex](https://miktex.org) is the most stable LaTeX build system we've found.
