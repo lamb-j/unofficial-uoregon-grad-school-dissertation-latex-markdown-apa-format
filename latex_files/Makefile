@@ -1,6 +1,3 @@
-# For the Mac only, comment out for other architectures
-#LATEXFLAGS = "-output-format=0"
-
 SHELL = /bin/sh
 MAIN = main
 
@@ -31,5 +28,6 @@ findref:
                done
 
 clean:
-	$(RM) *.aux *.log *.out *.lof *.lot *.toc *.lbl *.brf $(MAIN).dvi $(MAIN).ps $(MAIN).pdf $(MAIN).bbl $(MAIN).blg $(MAIN).synctex.gz
+	$(RM) *.aux *.log *.out *.lof *.lot *.toc *.lbl *.brf *.fls *.fdb_latexmk $(MAIN).dvi $(MAIN).ps $(MAIN).pdf $(MAIN).bbl $(MAIN).blg $(MAIN).synctex.gz $(MAIN).tdo
+
 
