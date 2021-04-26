@@ -104,6 +104,7 @@
 \PassOptionsToClass{12pt}{report}
 \fi\fi
 \LoadClass{report}
+\RequirePackage[letterpaper]{geometry} % Prevents from using A4
 \RequirePackage{float}
 %\RequirePackage{subfig}
 \RequirePackage{subcaption}

@@ -1,18 +1,19 @@
 SHELL = /bin/sh
 MAIN = main
+LATEX = pdflatex
 
 all: $(MAIN).pdf findref
 
 $(MAIN).pdf: *.tex $(MAIN).bib
-	pdflatex $(LATEXFLAGS) $(MAIN).tex
+	$(LATEX) $(LATEXFLAGS) $(MAIN).tex
 	bibtex $(LATEXFLAGS) $(MAIN)
 	touch $(MAIN).tex
-	pdflatex $(LATEXFLAGS) $(MAIN).tex
-	pdflatex $(LATEXFLAGS) $(MAIN).tex
-	pdflatex $(LATEXFLAGS) $(MAIN).tex
+	$(LATEX) $(LATEXFLAGS) $(MAIN).tex
+	$(LATEX) $(LATEXFLAGS) $(MAIN).tex
+	$(LATEX) $(LATEXFLAGS) $(MAIN).tex
 
 short: *.tex 
-	pdflatex $(LATEXFLAGS) $(MAIN).tex
+	$(LATEX) $(LATEXFLAGS) $(MAIN).tex
 
 findref:
 	@echo
