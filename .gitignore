@@ -1,17 +1,22 @@
-builds
+# Other build files
 latex_files/version_control_commit_number_to_print_on_draft_title_page.tex
 # Latex
+*-eps-converted-to.pdf
 *.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
 *.lof
 *.log
 *.lot
+*.nav
 *.out
-*.pdf
+*.snm
+*.synctex.gz
+*.tdo
 *.toc
-*.fdb_latexmk
-*.fls
-*.bbl
-*.blg
+*.vrb
 # Vim
 .*.swo
 .*.swp
