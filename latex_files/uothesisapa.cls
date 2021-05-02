@@ -60,7 +60,7 @@
 \newif\if@draftimage
 \newif\if@lackscommittee
 
-\DeclareOption{dissertation}{\@dissertationtrue\thesistrue\apacitetrue}
+\DeclareOption{dissertation}{\@dissertationtrue\thesistrue}
 \DeclareOption{msthesis}{\@dissertationfalse\thesistrue}
 \DeclareOption{approved}{\@approvedtrue}
 \DeclareOption{draftimages}{\draftimagetrue\PassOptionsToPackage{draft}{graphicx}}
@@ -131,6 +131,7 @@
 \fi
 \ifapacite
 \RequirePackage[natbibapa]{apacite}
+\bibliographystyle{apacite}
 \fi
 
 \ifdraft
@@ -417,8 +418,7 @@ of this document.}
 \clearpage
 \thispagestyle{plain}
 \@fromtopskip{5in}
-% Added by JL to specify a license that the work is released under:
-\begin{singlespacing} % Changed by JL following a request from the Grad. School.
+\begin{singlespacing}
 \ifbound\else\begin{center}
 % Automatically give the author and year, without an extra linebreak beneath (as you would get from using '\ifbound\else\centerline{\copyright ~\thedegreeyear ~\@author}\fi'):
 \copyright ~\thedegreeyear ~\@author \\
@@ -426,13 +426,18 @@ of this document.}
 All rights reserved.
 
 %%%%%%%%%%%%%%%%%%%%%%
-% Below is an example for a Creative-Commons style license, if you want to use one (if you use this, delete "All rights reserved." above). It assumes that you've downloaded the logo for the license (you'll need to change '/path/to/logo/image.png' to match where the image is on your filesystem):
-% (You would uncomment both of the lines below, and choose whatever license you wanted (not just Attribution, but maybe a more restrictive license -- see https://creativecommons.org/choose/ for help choosing).
+% Below is an example for a Creative-Commons style license, if you want
+% to use one (if you use this, delete "All rights reserved." above). It
+% assumes that you've downloaded the logo for the license (you'll need
+% to change '/path/to/logo/image.eps' where you stored the file.
+% (You would uncomment both of the lines below, and choose whatever
+% license you wanted (not just Attribution, but maybe a more restrictive
+% license -- see https://creativecommons.org/choose/ for help choosing).
 %%%%%%%%%%%%%%%%%%%%%%
 
 %This work, including text and images of this document but not including supplemental files (for example, not including software code and data), is licensed under a Creative Commons\\ \textbf{\href{http://creativecommons.org/licenses/by/4.0/}{Attribution 4.0 International License}.}\\
 
-%\raisebox{-.5\height}{\includegraphics[height=2em]{/path/to/logo/image.png}}
+%\raisebox{-.5\height}{\includegraphics[height=2em]{/path/to/logo/image.eps}}
 
 %%%%%%%%%%%%%%%%%%%%%%
 % End of example
