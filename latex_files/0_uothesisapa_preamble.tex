@@ -11,15 +11,15 @@
 %==============================================================================%
 % Preamble
 %==============================================================================%
-%\documentclass[dissertation, copyright, final]{uothesisapa} % For final copies
+%\documentclass[dissertation, copyright, final]{uothesis} % For final copies
   % Add 'approved' to the list of options to add the Approval page.
 
-\documentclass[dissertation, apacite, copyright, approved, final]{uothesisapa} % For final copies
+\documentclass[dissertation, apacite, copyright, approved, final]{uothesis} % For final copies
   % Add 'approved' to the list of options to add the Approval page.
 
-%\documentclass[dissertation, draftcopy]{uothesisapa} % For draft copies (enables line numbering, and puts black bars where there is text that overflows a line where latex can't figure out how to break it onto another line (in "final" mode, this will result in an "overfull hbox" error, so draft mode is a good way of spotting these, following http://tex.stackexchange.com/a/39/56363)
+%\documentclass[dissertation, draftcopy]{uothesis} % For draft copies (enables line numbering, and puts black bars where there is text that overflows a line where latex can't figure out how to break it onto another line (in "final" mode, this will result in an "overfull hbox" error, so draft mode is a good way of spotting these, following http://tex.stackexchange.com/a/39/56363)
 
-%\documentclass[msthesis, lackscommittee, approved, final]{uothesisapa} % Example for Masters thesis that does not include a committee.
+%\documentclass[msthesis, lackscommittee, approved, final]{uothesis} % Example for Masters thesis that does not include a committee.
 
 %------------------------------------------------------------------------------%
 % PACKAGES
@@ -45,18 +45,31 @@
 
 % Added by Jacob L. following https://tex.stackexchange.com/questions/148314/undefined-control-sequence-in-printbibliography-biblatex to allow UTF-8 (non-ASCII) characters in the bibliography .bib file.
 \usepackage[utf8]{inputenc}
-
 \usepackage{hyperref}
 
-%--- Bibliography packages.
+%------------------------------------------------------------------------------%
+% BIBLIOGRAPHY
+%------------------------------------------------------------------------------%
 %--- You need to specify these if your dissertation is something other than
-%--- apacite+bibtex. For example:
-%--- If using biblatex, you need to manualy fix spacing.
+%--- apacite+bibtex, but these may be helpful for anything nonstandard.
+%
+%--- For example: If using biblatex, you need to manualy fix spacing and ensure
+%--- bibitems do not straddle page breaks and show up in TOC
 % \usepackage{bibspacing}
+% \setcounter{secnumberdepth}{4}
+% \patchcmd{\bibsetup}{\interlinepenalty=5000}{\interlinepenalty=10000}{}{}
 % \setlength\bibitemsep{0.5\baselineskip}
+% \usepackage{tocloft}
+% \renewcommand{\cftchapfont}{\normalsize}
+% \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+% \renewcommand*{\numberline}[1]{\hb{#1  \hfil}}
+%
 %--- Or, if you want to change the citation style to e.g. acm
 % \bibliographystyle{acm}
 
+%------------------------------------------------------------------------------%
+% MATH EQUATIONS AND THEOREMS (.cls also restructures theorem layout)
+%------------------------------------------------------------------------------%
 %--- Change \align{} and \equation{} spaceing
 \usepackage{etoolbox}
 \newcommand{\zerodisplayskips}{%
